@@ -1,0 +1,281 @@
+/*
+In this page I have:
+- google map for location;
+- a search bar;
+- search button color will be a little bit darker when hover on it;
+- landmark picture has little bit shadow effect;
+- svg is on the learn-more button;
+- color will be changed in each row if you hover on the table;
+- Gradient is used in the background color of founder section;
+- this page is responsive as well...
+*/
+
+/*-----------------------Location our store section-------------------*/
+main{
+    display: flex;
+    flex-direction: column;
+}
+.location{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+    padding: 0% 3% 2% 3%;
+}
+
+.location-google-map iframe {
+    width: 100vw;
+    height: 100vh;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.location-content{
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+}
+
+
+.location-content h2 {
+    color: #0e0e0e;
+
+}
+
+.location-content p {
+    color: #808080;
+    letter-spacing: 1px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2%;
+}
+
+#search-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+#search-button {
+    padding: 10px 15px;
+    background-color: #a79161;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #89764c;
+}
+
+
+/*-----------------------New store section-------------------*/
+
+.new-shop{
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.new-shop{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+}
+
+.new-shop-picture{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.new-shop-picture img{
+    width: 70%;
+    height: auto;
+    filter: drop-shadow(0px 0px 0px #808080);
+
+    transition: all .25s linear;
+}
+
+
+.new-shop-picture img:hover{
+    filter: drop-shadow(15px 10px 4px #808080);
+}
+
+
+.new-shop-content{
+    margin-left: 50px;
+}
+
+
+.new-shop-content h5{
+    font-size: 1.8em;
+}
+
+.new-shop .new-shop-content a{
+    position: relative;
+    transform: translate(-50%, -50%);
+    padding:2% 5%;
+    width: 180px;
+    height: 60px;
+    line-height: 70px;
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: #0e0e0e;
+    background-color: #f9f9f9;
+}
+
+
+.new-shop-content a svg,
+.new-shop-content a svg rect{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+}
+.new-shop-content a svg rect{
+    stroke: #b9a881;
+    stroke-width: 4;
+    transition: 0.5s;
+    stroke-dasharray: 500, 500;
+    stroke-dashoffset: 0;
+}
+.new-shop-content a:hover svg rect{
+    stroke-dasharray: 100, 400;
+    stroke-dashoffset: 220;
+    stroke: #b9a881;
+}
+
+/* ----------------------------Table (Desktop) -------------------*/
+.location-table{
+    padding: 3% 5%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.location-table table th {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #f4f4f4;
+    padding: 1% 2%;
+}
+
+.location-table table td {
+    font-weight: normal;
+    font-size: 1em;
+    box-shadow: 0 2px 2px -2px #0E1119;
+    color: #0e0e0e;
+}
+
+.location-table table {
+    text-align: center;
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+    display: table;
+}
+
+.location-table table td, .table-row table th {
+    padding-bottom: 1%;
+    padding-top: 1%;
+    padding-left:1%;
+}
+
+/* Background-color of the odd rows */
+.location-table table tr:nth-child(odd) {
+    background-color: #f4f4f4;
+}
+
+
+.location-table table tr:nth-child(odd) > td {
+    color: #0e0e0e;
+}
+
+
+/* Background-color of the even rows */
+.location-table table tr:nth-child(even) {
+    background-color: #b9a881;
+}
+
+.location-table table tr:nth-child(even) > td {
+    color: #0e0e0e;
+}
+
+
+.location-table table th {
+    background-color: #89764c;
+}
+
+.location-table table td:first-child {
+    color: #f4f4f4;
+    max-width:150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+
+.location-table table tr:hover {
+    background-color: #b98c81;
+    /*#b98c81 is Analogous Colors of #b9a881*/
+    box-shadow: 0 6px 6px -6px #999999;
+}
+
+
+/* ----------------------------brand founder -------------------*/
+.brand-founder{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #89764c, #a79161, #b9a881);
+    padding: 2%;
+}
+
+.brand-founder img{
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px 30px;
+    max-width: 100%;
+    height: auto;
+}
+
+
+.brand-founder div:last-child{
+    padding: 2% 10%;
+}
+
+
+.brand-founder h4{
+    font-size: 1.4em;
+    text-align: justify;
+    color: #f4f4f4;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.brand-founder p{
+    line-height: 1.5;
+    text-align: justify;
+    color: #f4f4f4;
+}
+
+
+
+/* Table (Mobile) */
+@media screen and (max-width: 768px) {
+    .table-row {
+        width: 90%;
+    }
+}
